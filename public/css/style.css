@@ -1,0 +1,56 @@
+/* Base Styles -------------------- */
+body {
+  width: calc(100% - 30px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". nav"
+    "main main"
+    "footer footer";
+    grid-column-gap: 10px;
+}
+
+nav {
+  height: 250px;
+  grid-area: nav;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+nav a {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 3px 0;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  height: 50px;
+  line-height: 50px;
+  grid-area: footer;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.white-link {
+  color: white;
+}
+
+/* Mobile first Media Queries ------------------ */
+
+@media (min-width: 750px) {    /* Larger than tablet */
+  body {
+    grid-template-columns: 130px auto 150px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      ". main nav"
+      ". footer .";
+  }  
+}
