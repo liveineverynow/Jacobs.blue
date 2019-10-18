@@ -40,6 +40,10 @@ footer {
   font-size: 0.7rem;
 }
 
+main h1 {
+  font-weight: bold;
+}
+
 main a {
   color: black;
   text-decoration: underline;
