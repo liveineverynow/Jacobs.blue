@@ -6,31 +6,92 @@
   <title>Jacob's Blue</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home.css">
   <link rel="manifest" href="/manifest.json">
+
+  <!-- Components -->
+  <script src="components/pageContainer.js"></script>
+
+  <!-- Functionailty -->
+  <script src="main.js" async="false"></script>
 </head>
 
 <body>
 
+  <header class="jumbo">
+    <img  id="logo" src="assets/logo.png" alt="JACOB'S BLUE logo" style="width:100%;">
+    <img id="shadow" src="assets/shadow.png" alt="logo shadow">
+  </header>
+
   <nav>
-    <a href="./" class="white-link">HOME</a>
-    <a href="music">MUSIC</a>
-    <a href="video">VIDEO</a>
-    <a href="events">EVENTS</a>
-    <a href="shop">SHOP</a>
-    <a href="more">MORE</a>
+    <button id="home-nav" onclick="changePage('home')">home</button>
+    <button id="music-nav" onclick="changePage('music')">music</button>
+    <button id="video-nav" onclick="changePage('video')">video</button>
+    <button id="events-nav" onclick="changePage('events')">events</button>
+    <button id="shop-nav" onclick="changePage('shop')">shop</button>
+    <button id="more-nav" onclick="changePage('more')">more</button>
   </nav>
 
-  <main>
-    <div id="logo-animation">
-      <img id="logo" src="assets/main-logo.png" alt="">
-      <img id="shadow" src="assets/Home_Page_Shadow.png" alt="">    
-    </div>
-  </main>
+  <!-- Home -->
+  <page-container color="#8ddd15" title="home">
+  </page-container>
 
-  <footer>
-    &copy; 2019. JACOB'S BLUE. ALL RIGHTS RESERVED.
-  </footer>
+
+
+  <!-- Music -->
+  <page-container color="#18d69d" title="music" invis>
+    <h1>music</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    
+  </page-container>
+  
+
+
+  <!-- Video -->
+  <page-container color="#d6b318" title="video" invis>
+    <h1>video</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    
+  </page-container>
+
+
+
+  <!-- Events -->
+  <page-container color="#d63e18" title="events" invis>
+    <h1>events</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+  </page-container>
+
+
+
+  <!-- Shop -->
+  <page-container color="#1871d6" title="shop" invis>
+    <h1>shop</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
+    
+  </page-container>
+
+
+
+  <!-- More -->
+  <page-container color="#d6189d" title="more" invis>
+    <h1>more</h1>
+    <footer>
+        &copy; 2019. JACOB'S BLUE. ALL RIGHTS RESERVED.
+      </footer>
+  </page-container>
+
+
+
+
+
 
 </body>
 

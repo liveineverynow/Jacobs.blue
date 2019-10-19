@@ -1,72 +1,131 @@
 /* Base Styles -------------------- */
 body {
-  width: calc(100% - 50px);
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    ". nav"
-    "main main"
-    "footer footer";
-    grid-column-gap: 10px;
+  background-color: #8ddd15;
+  transition-duration: 300ms;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 nav {
-  height: 250px;
-  grid-area: nav;
+  width: 120px;
+  height: 210px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-end;
+
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: 2;
 }
 
-nav a {
+nav button {
   color: black;
   font-size: 1.5rem;
   font-weight: bold;
   margin: 3px 0;
-}
-
-main {
-  grid-area: main;
-  min-height: calc(100vh - 300px);
+  background: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: left;
 }
 
 footer {
-  height: 50px;
   line-height: 50px;
-  grid-area: footer;
   text-align: center;
   font-size: 0.7rem;
 }
 
-main h1 {
-  font-weight: bold;
-}
-
-main a {
-  color: black;
-  text-decoration: underline;
+page-container p {
+  padding-bottom: 200px;
 }
 
 .white-link {
   color: white;
 }
 
+#home-nav {
+  color: white;
+}
+
+/* Moving Logo */
+header {
+  position: absolute;
+  z-index: 2;
+  transform: translateX(-50%);
+  transition: top 300ms, left 300ms, width 300ms, max-width 600ms, transform 400ms;
+}
+#logo {
+  animation-name: moving-logo;
+  animation-duration: 8000ms;
+  animation-delay: 400ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#shadow {
+  display: block;
+  width: 50%;
+  margin: 11% auto;
+  animation: shadow-animation 8000ms 400ms infinite alternate;
+}
+.jumbo {
+  top: 40vh;
+  left: 50%;
+  width: 80vw;
+  max-width: 700px;
+}
+.no-jumbo {
+  transform: translateX(-50%) rotate(-360deg);
+  top: calc(50px + 2vw);
+  left: 33%;
+  width: 50vw;
+}
+@keyframes moving-logo {
+  0% {
+    transform: rotateZ(0) scale(1);
+  }
+  50% {
+    transform: rotateZ(-10deg) scale(1.05);
+  }
+  100% {
+    transform: rotateZ(1deg) scale(0.95);
+  }
+}
+@keyframes shadow-animation {
+  0% {
+    margin-top: 11%;
+    transform: scale(1.0);
+  }
+  50% {
+    margin-top: 10%;
+    transform: scale(1.2);
+  }
+  100% {
+    margin-top: 12%;
+    transform: scale(0.8);
+  }
+}
+
+
+
 /* Mobile first Media Queries ------------------ */
 
-@media (min-width: 750px) {    /* Larger than tablet */
-  body {
-    grid-template-columns: 130px auto 150px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      ". main nav"
-      ". footer .";
+@media (min-width: 1130px) {    /* Larger than tablet */
+  nav {
+    position: fixed;
+    right: 15px;
   }
-
-  main {
-    min-height: calc(100vh - 150px);
-    margin-top: 100px;
-    padding: 0 calc(-225px + 30vw);
+  .jumbo {
+    top: 40vh;
+    left: 50%;
+    width: 80vw;
+  }
+  
+  .no-jumbo {
+    position: fixed;
+    top: 60px;
+    left: calc(15px + 14vw);
+    width: 24vw;
+    max-width: 500px;
   }
 }
