@@ -13,12 +13,11 @@ function changePage(pageName) {
 
   window.scrollTo(0, 0)
 
+  let logo = document.querySelector("header")
   if (pageName !== "home") {
-    let logo = document.getElementById("logo")
     logo.classList.remove("jumbo")
     logo.classList.add("no-jumbo")
   } else {
-    let logo = document.getElementById("logo")
     logo.classList.add("jumbo")
     logo.classList.remove("no-jumbo")
   }
