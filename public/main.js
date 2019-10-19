@@ -1,5 +1,5 @@
 function changePage(pageName) {
-  window.history.pushState('Page change', pageName, '/' + pageName);
+  window.history.pushState(pageName, pageName, '/' + pageName);
 
   let oldPage = document.querySelector("page-container:not([invis])")
   let newPage = document.querySelector(`page-container[title=${pageName}]`)
@@ -11,12 +11,13 @@ function changePage(pageName) {
   document.querySelectorAll("nav button").forEach((el) => {el.style.color = "black"})
   document.getElementById(pageName + "-nav").style.color = "white"
 
+  window.scrollTo(0, 0)
+
   if (pageName !== "home") {
     let logo = document.getElementById("logo")
     logo.classList.remove("jumbo")
     logo.classList.add("no-jumbo")
   } else {
-    window.scrollTo(0, 0)
     let logo = document.getElementById("logo")
     logo.classList.add("jumbo")
     logo.classList.remove("no-jumbo")

@@ -12,20 +12,42 @@ class pageContainer extends HTMLElement {
       :host {
         display: block;
         width: 100%;
-        opacity: 1;
         position: absolute;
-        top: 0;
-        left: 0;
-        transition: transform 1ms, left 300ms ease-out 1ms, opacity 300ms;
+
+        animation-name: ingress;
+        animation-duration: 1000ms;
+        animation-iteration-count: 1;
       }
 
       :host([invis]) {
-        transform: scaleY(0.1);
-        left: 100vw;
         opacity: 0;
-        overflow: hidden;
-        transition: left 300ms ease-out, transform 1ms 300ms, opacity 300ms;
+        transform: scaleY(0);
+        animation-name: egress;
+        animation-duration: 300ms;
+        animation-iteration-count: 1;
+      }
 
+      @keyframes ingress {
+        0% {
+          left: 100vw;
+          opacity: 0;
+        }
+        50% {
+          left: 10vw;
+          opacity: 0;
+        }
+        100% {
+          left: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes egress {
+        0% {
+        }
+        100% {
+          opacity: 0;
+        }
       }
 
       div {

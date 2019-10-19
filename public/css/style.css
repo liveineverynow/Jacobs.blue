@@ -3,6 +3,7 @@ body {
   background-color: #99ff00;
   transition-duration: 300ms;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 nav {
@@ -50,8 +51,14 @@ page-container p {
 /* Moving Logo */
 #logo {
   position: absolute;
+  z-index: 2;
   transform: translateX(-50%);
-  transition: top 300ms, left 300ms, width 300ms, max-width 300ms 300ms;
+  transition: top 300ms, left 300ms, width 300ms, max-width 600ms;
+  animation-name: moving-logo;
+  animation-duration: 15000ms;
+  animation-delay: 1000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .jumbo {
   top: 45vh;
@@ -63,6 +70,17 @@ page-container p {
   top: calc(120px - 2vw);
   left: 33%;
   width: 50vw;
+}
+@keyframes moving-logo {
+  0% {
+    transform: rotateZ(0) translateX(-50%) scale(1);
+  }
+  50% {
+    transform: rotateZ(-4deg) translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: rotateZ(1deg) translateX(-50%) scale(0.95);
+  }
 }
 
 
