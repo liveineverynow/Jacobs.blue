@@ -1,4 +1,6 @@
 function changePage(pageName) {
+  window.history.pushState('Page change', pageName, '/' + pageName);
+
   let oldPage = document.querySelector("page-container:not([invis])")
   let newPage = document.querySelector(`page-container[title=${pageName}]`)
 
@@ -19,4 +21,11 @@ function changePage(pageName) {
     logo.classList.add("jumbo")
     logo.classList.remove("no-jumbo")
   }
+}
+
+let intendedURL = window.location.href.split("/")
+intendedURL = intendedURL[intendedURL.length - 1]
+let validUrls = ['home', 'shop', 'music', 'video', 'events', 'more']
+if (validUrls.indexOf(intendedURL) > -1) {
+  changePage(intendedURL)
 }
