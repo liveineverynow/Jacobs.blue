@@ -53,7 +53,7 @@ class pageContainer extends HTMLElement {
       div {
         width: calc(100% - 40px);
         max-width: 750px;
-        margin: 350px auto;
+        margin: 250px auto;
       }
     `
 

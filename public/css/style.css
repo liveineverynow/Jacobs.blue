@@ -1,6 +1,6 @@
 /* Base Styles -------------------- */
 body {
-  background-color: #99ff00;
+  background-color: #8ddd15;
   transition-duration: 300ms;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -8,14 +8,14 @@ body {
 
 nav {
   width: 120px;
-  height: 250px;
+  height: 220px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
 
   position: absolute;
   top: 0;
-  left: calc(100vw - 150px);
+  right: 15px;
   z-index: 2;
 }
 
@@ -49,37 +49,60 @@ page-container p {
 }
 
 /* Moving Logo */
-#logo {
+header {
   position: absolute;
   z-index: 2;
   transform: translateX(-50%);
-  transition: top 300ms, left 300ms, width 300ms, max-width 600ms;
+  transition: top 300ms, left 300ms, width 300ms, max-width 600ms, transform 400ms;
+}
+#logo {
   animation-name: moving-logo;
-  animation-duration: 15000ms;
-  animation-delay: 1000ms;
+  animation-duration: 8000ms;
+  animation-delay: 400ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+#shadow {
+  display: block;
+  width: 50%;
+  margin: 11% auto;
+  animation: shadow-animation 8000ms 400ms infinite alternate;
+}
 .jumbo {
-  top: 45vh;
+  top: 40vh;
   left: 50%;
   width: 80vw;
   max-width: 700px;
 }
 .no-jumbo {
-  top: calc(120px - 2vw);
+  transform: translateX(-50%) rotate(-360deg);
+  top: calc(50px + 2vw);
   left: 33%;
   width: 50vw;
 }
 @keyframes moving-logo {
   0% {
-    transform: rotateZ(0) translateX(-50%) scale(1);
+    transform: rotateZ(0) scale(1);
   }
   50% {
-    transform: rotateZ(-4deg) translateX(-50%) scale(1.05);
+    transform: rotateZ(-10deg) scale(1.05);
   }
   100% {
-    transform: rotateZ(1deg) translateX(-50%) scale(0.95);
+    transform: rotateZ(1deg) scale(0.95);
+  }
+}
+@keyframes shadow-animation {
+  0% {
+    margin-top: 11%;
+    transform: scale(1.0);
+  }
+  50% {
+    margin-top: 10%;
+    transform: scale(1.2);
+  }
+  100% {
+    margin-top: 12%;
+    transform: scale(0.8);
   }
 }
 
@@ -90,7 +113,7 @@ page-container p {
 @media (min-width: 1130px) {    /* Larger than tablet */
   nav {
     position: fixed;
-    left: calc(420px + 50vw);
+    right: 15px;
   }
   .jumbo {
     top: 40vh;
@@ -99,9 +122,10 @@ page-container p {
   }
   
   .no-jumbo {
-    top: calc(120px - 2vw);
-    left: calc(-150px + 50vw);
-    width: 30vw;
+    position: fixed;
+    top: 60px;
+    left: calc(15px + 14vw);
+    width: 24vw;
     max-width: 500px;
   }
 }
