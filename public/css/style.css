@@ -6,6 +6,20 @@ body {
   overflow-y: scroll;
 }
 
+h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h1.music  {
+  color: #FF006C;
+  text-shadow: 10px 10px #008BF2;
+  /* text-shadow: -1px 0 #FF006C, 0 1px #FF006C, 1px 0 #FF006C, 0 -1px #FF006C; */
+}
+
 nav {
   width: 120px;
   height: 210px;
@@ -120,7 +134,7 @@ header {
     left: 50%;
     width: 80vw;
   }
-  
+
   .no-jumbo {
     position: fixed;
     top: 60px;
