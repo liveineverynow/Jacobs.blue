@@ -1,0 +1,18 @@
+h1.music  {
+  color: #FF006C;
+  text-shadow: 7px 7px #008BF2;
+  /* text-shadow: -1px 0 #FF006C, 0 1px #FF006C, 1px 0 #FF006C, 0 -1px #FF006C; */
+}
+
+.songs-container {
+  width: 100%;
+  padding-top: .8em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.song {
+  max-width: 250px;
+  margin: 50px 30px;
+}

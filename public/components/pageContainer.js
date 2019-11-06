@@ -1,7 +1,7 @@
 class pageContainer extends HTMLElement {
 
   static get observedAttributes() {return ['title', 'invis']}
-  
+
   constructor() {
     super()
 
@@ -52,8 +52,8 @@ class pageContainer extends HTMLElement {
 
       div {
         width: calc(100% - 40px);
-        max-width: 750px;
-        margin: 250px auto;
+        max-width: 1250px;
+        margin: 200px auto;
       }
     `
 
