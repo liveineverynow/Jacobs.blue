@@ -54,6 +54,10 @@ class pageContainer extends HTMLElement {
         width: calc(100% - 40px);
         max-width: 750px;
         margin: 250px auto;
+        display: inherit;
+        flex-flow: inherit;
+        justify-content: inherit;
+        align-items: inherit;
       }
     `
 

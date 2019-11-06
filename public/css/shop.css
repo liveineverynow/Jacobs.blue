@@ -1,0 +1,17 @@
+#shop-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+shop-item {
+  flex-grow: 1;
+  margin: 20px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 1px 3px #00000022;
+}
+
+shop-item:hover {
+  box-shadow: 4px 4px 1px 4px #00000033;
+}
