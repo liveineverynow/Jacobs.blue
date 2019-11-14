@@ -6,6 +6,7 @@
   <title>Jacob's Blue</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/music.css">
   <link rel="manifest" href="/manifest.json">
 
   <!-- Components -->
@@ -28,40 +29,157 @@
     <button id="video-nav" onclick="changePage('video')">video</button>
     <button id="events-nav" onclick="changePage('events')">events</button>
     <button id="shop-nav" onclick="changePage('shop')">shop</button>
-    <button id="more-nav" onclick="changePage('more')">more</button>
+    <!-- <button id="more-nav" onclick="changePage('more')">more</button> -->
   </nav>
 
   <!-- Home -->
   <page-container color="#8ddd15" title="home">
   </page-container>
 
-
-
   <!-- Music -->
-  <page-container color="#18d69d" title="music" invis>
-    <h1>music</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
-    
-  </page-container>
-  
+  <page-container color="#00CCFF" title="music" invis>
+    <h1 class="music">music</h1>
+      <div class="songs-container">
 
+        <div class="song">
+          <button onclick="changePage('song01')">
+            <img src="assets/Rectangle.png" alt="SONG01" width=265px height=265px>
+            <h4 class="music">SONG 01</h4>
+          </button>
+        </div>
+
+        <div class="song">
+          <button onclick="changePage('song02')">
+            <img src="assets/Rectangle.png" alt="SONG02" width=265px height=265px>
+            <h4 class="music">SONG 02</h4>
+          </button>
+        </div>
+
+        <div class="song">
+          <button onclick="changePage('song03')">
+            <img src="assets/Rectangle.png" alt="SONG03" width=265px height=265px>
+            <h4 class="music">SONG 03</h4>
+          </button>
+        </div>
+
+        <div class="song">
+          <button onclick="changePage('song04')">
+            <img src="assets/Rectangle.png" alt="SONG04" width=265px height=265px>
+            <h4 class="music">SONG 04</h4>
+          </button>
+        </div>
+
+        <div class="song">
+          <button onclick="changePage('song05')">
+            <img src="assets/Rectangle.png" alt="SONG05" width=265px height=265px>
+            <h4 class="music">SONG 05</h4>
+          </button>
+        </div>
+
+        <div class="song">
+          <button onclick="changePage('song06')">
+            <img src="assets/Rectangle.png" alt="SONG06" width=265px height=265px>
+            <h4 class="music">SONG 06</h4>
+          </button>
+        </div>
+
+      </div>
+  </page-container>
+
+  <!-- ALL SONG PAGES -->
+
+  <!-- Song 01 -->
+  <page-container color="#00CCFF" title="song01" invis>
+      <h1>SONG_01</h1>
+      <button onclick="changePage('music')">Back to all songs</button>
+      <h4>PLAY ON</h4>
+      <a href="#">Spotify</a>
+      <a href="#">Apple Music</a>
+      <a href="#">Youtube</a>
+      <a href="#">Tidal</a>
+      <a href="#">Soundcloud</a>
+      <button onclick="changePage('song02')">NEXT SONG</button>
+  </page-container>
+
+  <!-- Song 02 -->
+  <page-container color="#00CCFF" title="song02" invis>
+      <h1>SONG_02</h1>
+      <button onclick="changePage('music')">Back to all songs</button>
+      <h4>PLAY ON</h4>
+      <a href="#">Spotify</a>
+      <a href="#">Apple Music</a>
+      <a href="#">Youtube</a>
+      <a href="#">Tidal</a>
+      <a href="#">Soundcloud</a>
+      <button onclick="changePage('song03')">NEXT SONG</button>
+  </page-container>
+
+  <!-- Song 03 -->
+  <page-container color="#00CCFF" title="song03" invis>
+      <h1>SONG_03</h1>
+      <button onclick="changePage('music')">Back to all songs</button>
+      <h4>PLAY ON</h4>
+      <a href="#">Spotify</a>
+      <a href="#">Apple Music</a>
+      <a href="#">Youtube</a>
+      <a href="#">Tidal</a>
+      <a href="#">Soundcloud</a>
+      <button onclick="changePage('song04')">NEXT SONG</button>
+  </page-container>
+
+  <!-- Song 04 -->
+  <page-container color="#00CCFF" title="song04" invis>
+      <h1>SONG_04</h1>
+      <button onclick="changePage('music')">Back to all songs</button>
+      <h4>PLAY ON</h4>
+      <a href="#">Spotify</a>
+      <a href="#">Apple Music</a>
+      <a href="#">Youtube</a>
+      <a href="#">Tidal</a>
+      <a href="#">Soundcloud</a>
+      <button onclick="changePage('song05')">NEXT SONG</button>
+  </page-container>
+
+  <!-- Song 05 -->
+  <page-container color="#00CCFF" title="song05" invis>
+      <h1>SONG_05</h1>
+      <button onclick="changePage('music')">Back to all songs</button>
+      <h4>PLAY ON</h4>
+      <a href="#">Spotify</a>
+      <a href="#">Apple Music</a>
+      <a href="#">Youtube</a>
+      <a href="#">Tidal</a>
+      <a href="#">Soundcloud</a>
+      <button onclick="changePage('song06')">NEXT SONG</button>
+  </page-container>
+
+  <!-- Song 06 -->
+  <page-container color="#00CCFF" title="song06" invis>
+      <h1>SONG_06</h1>
+      <button onclick="changePage('music')">Back to all songs</button>
+      <h4>PLAY ON</h4>
+      <a href="#">Spotify</a>
+      <a href="#">Apple Music</a>
+      <a href="#">Youtube</a>
+      <a href="#">Tidal</a>
+      <a href="#">Soundcloud</a>
+      <button onclick="changePage('song07')">NEXT SONG</button>
+  </page-container>
 
   <!-- Video -->
-  <page-container color="#d6b318" title="video" invis>
-    <h1>video</h1>
+  <page-container color="#FF6600" title="video" invis>
+    <h1 class="video">video</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
-    
+
   </page-container>
 
 
 
   <!-- Events -->
-  <page-container color="#d63e18" title="events" invis>
-    <h1>events</h1>
+  <page-container color="#FF0066" title="events" invis>
+    <h1 class="events">events</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
@@ -70,12 +188,12 @@
 
 
   <!-- Shop -->
-  <page-container color="#1871d6" title="shop" invis>
-    <h1>shop</h1>
+  <page-container color="#FFCC00" title="shop" invis>
+    <h1 class="shop">shop</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur eos quam reprehenderit iure et quidem vero officia modi, commodi placeat quis hic quos vel voluptates, deserunt veritatis ducimus corrupti?</p>
-    
+
   </page-container>
 
 

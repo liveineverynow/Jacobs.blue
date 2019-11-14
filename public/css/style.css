@@ -6,13 +6,20 @@ body {
   overflow-y: scroll;
 }
 
+h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
 nav {
   width: 120px;
   height: 210px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-
   position: absolute;
   top: 0;
   right: 15px;
@@ -40,6 +47,11 @@ page-container p {
   padding-bottom: 200px;
 }
 
+page-container {
+  margin: auto;
+  align-items: center;
+}
+
 .white-link {
   color: white;
 }
@@ -55,6 +67,7 @@ header {
   transform: translateX(-50%);
   transition: top 300ms, left 300ms, width 300ms, max-width 600ms, transform 400ms;
 }
+
 #logo {
   animation-name: moving-logo;
   animation-duration: 8000ms;
@@ -62,24 +75,28 @@ header {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 #shadow {
   display: block;
   width: 50%;
   margin: 11% auto;
   animation: shadow-animation 8000ms 400ms infinite alternate;
 }
+
 .jumbo {
   top: 40vh;
   left: 50%;
   width: 80vw;
   max-width: 700px;
 }
+
 .no-jumbo {
   transform: translateX(-50%) rotate(-360deg);
   top: calc(50px + 2vw);
   left: 33%;
   width: 50vw;
 }
+
 @keyframes moving-logo {
   0% {
     transform: rotateZ(0) scale(1);
@@ -91,6 +108,7 @@ header {
     transform: rotateZ(1deg) scale(0.95);
   }
 }
+
 @keyframes shadow-animation {
   0% {
     margin-top: 11%;
@@ -107,7 +125,6 @@ header {
 }
 
 
-
 /* Mobile first Media Queries ------------------ */
 
 @media (min-width: 1130px) {    /* Larger than tablet */
@@ -120,7 +137,7 @@ header {
     left: 50%;
     width: 80vw;
   }
-  
+
   .no-jumbo {
     position: fixed;
     top: 60px;

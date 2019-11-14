@@ -25,7 +25,7 @@ function changePage(pageName) {
 
 let intendedURL = window.location.href.split("/")
 intendedURL = intendedURL[intendedURL.length - 1]
-let validUrls = ['home', 'shop', 'music', 'video', 'events', 'more']
+let validUrls = ['home', 'shop', 'music', 'video', 'events', 'song01', 'song02', 'song03', 'song04', 'song05', 'song06']
 if (validUrls.indexOf(intendedURL) > -1) {
   changePage(intendedURL)
 }
