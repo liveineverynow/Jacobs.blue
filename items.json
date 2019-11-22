@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Black T-Shirt",
+    "images": ["productImages/black_shirt.png"],
+    "price": 1800,
+    "description": "A nice shirt that your girlfriend will hate."
+  },
+  {
+    "id": 2,
+    "name": "Black hat",
+    "images": ["productImages/black_hat.png"],
+    "price": 1800,
+    "description": "Bed-head cover-uper. One size fits some."
+  },
+  {
+    "id": 2,
+    "name": "Hoodie",
+    "images": ["productImages/white_hoodie.png"],
+    "price": 1800,
+    "description": "A high quality snot rag."
+  }
+]

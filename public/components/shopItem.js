@@ -9,7 +9,8 @@ class shopItem extends HTMLElement {
         display: block;
         background: #eee;
         width: 300px;
-        height: 300px;
+        padding-top: 300px;
+        margin: 20px;
       }
     `
 
