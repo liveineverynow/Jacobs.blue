@@ -1,15 +1,20 @@
 function changePage(pageName) {
-  window.history.pushState(pageName, pageName, '/' + pageName);
-
   let oldPage = document.querySelector("page-container:not([invis])")
   let newPage = document.querySelector(`page-container[title=${pageName}]`)
+
+
+  document.querySelectorAll("nav button").forEach((el) => {el.style.color = "black"})
+  document.getElementById(pageName + "-nav").style.color = "white"
+
+  document.body.style.backgroundColor = newPage.getAttribute("color")
+
+  window.history.pushState(pageName, pageName, '/' + pageName);
+
 
   oldPage.setAttribute("invis", "")
   newPage.removeAttribute("invis")
 
-  document.body.style.backgroundColor = newPage.getAttribute("color")
-  document.querySelectorAll("nav button").forEach((el) => {el.style.color = "black"})
-  document.getElementById(pageName + "-nav").style.color = "white"
+
 
   window.scrollTo(0, 0)
 
