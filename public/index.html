@@ -6,19 +6,13 @@
   <title>Jacob's Blue</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/shop.css">
   <link rel="manifest" href="/manifest.json">
 
   <!-- Components -->
   <script src="components/pageContainer.js"></script>
-  <script src="components/shopItem.js"></script>
-  <script src="components/expandableContainer.js"></script>
 
   <!-- Functionailty -->
   <script src="main.js" async="false"></script>
-  <script src="https://js.stripe.com/v3/" async="false"></script>
-  <script src="shop.js" async="false" async="false"></script>
-
 </head>
 
 <body>
@@ -76,10 +70,14 @@
 
 
   <!-- Shop -->
-  <page-container id="shop-page" color="#1871d6" title="shop" invis>
+  <page-container id="shop-page" color="#ffcc00" title="shop" invis>
     <h1>SHOP</h1>
-    <div id="shop-items">
-    </div>
+
+    <!-- Shopify Code -->
+    
+    <div id='collection-component-1580358406696'></div>
+    <script type="text/javascript" src="shopify_script.js"></script>
+
   </page-container>
 
 
