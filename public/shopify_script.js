@@ -19,13 +19,13 @@
   }
   function ShopifyBuyInit() {
     var client = ShopifyBuy.buildClient({
-      domain: 'jacobs-blue.myshopify.com',
-      storefrontAccessToken: 'cff2257cdbc9a3a6a14f09ef104bb466',
+      domain: 'jacobs-blue-store.myshopify.com',
+      storefrontAccessToken: 'ca2a17dacc833e4151d32c1cb3ba0895',
     });
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
-        id: '165876695172',
-        node: document.getElementById('collection-component-1580396990643'),
+        id: '164408131643',
+        node: document.getElementById('collection-component-1580421086008'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
@@ -50,19 +50,25 @@
           "height": "0"
         }
       },
-      "title": {
-        "color": "#242424"
-      },
       "button": {
         "font-weight": "bold",
         ":hover": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         },
-        "background-color": "#000000",
+        "background-color": "#4d4d4d",
         ":focus": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         }
       }
+    },
+    "buttonDestination": "modal",
+    "contents": {
+      "button": false,
+      "options": false
+    },
+    "isButton": true,
+    "text": {
+      "button": "VIEW PRODUCT"
     }
   },
   "productSet": {
@@ -92,11 +98,11 @@
       "button": {
         "font-weight": "bold",
         ":hover": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         },
-        "background-color": "#000000",
+        "background-color": "#4d4d4d",
         ":focus": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         }
       }
     },
@@ -109,29 +115,30 @@
       "button": {
         "font-weight": "bold",
         ":hover": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         },
-        "background-color": "#000000",
+        "background-color": "#4d4d4d",
         ":focus": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         }
       }
     },
     "text": {
       "total": "Subtotal",
       "button": "Checkout"
-    }
+    },
+    "popup": false
   },
   "toggle": {
     "styles": {
       "toggle": {
         "font-weight": "bold",
-        "background-color": "#000000",
+        "background-color": "#4d4d4d",
         ":hover": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         },
         ":focus": {
-          "background-color": "#000000"
+          "background-color": "#454545"
         }
       }
     }

@@ -10,11 +10,8 @@ function changePage(pageName) {
 
   window.history.pushState(pageName, pageName, '/' + pageName);
 
-
   oldPage.setAttribute("invis", "")
   newPage.removeAttribute("invis")
-
-
 
   window.scrollTo(0, 0)
 
